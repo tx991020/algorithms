@@ -1,4 +1,5 @@
 """
+Josephus problem:
 There are people sitting in a circular fashion,
 print every third member while removing them,
 the next counter starts immediately after the member is removed.
@@ -11,7 +12,7 @@ Output: 369485271
 
 a = ['1','2','3','4','5','6','7','8','9']
 
-def josepheus(int_list, skip):
+def josephus(int_list, skip):
   skip = skip - 1 #list starts with 0 index
   idx = 0
   while len(int_list)>0:
@@ -19,7 +20,7 @@ def josepheus(int_list, skip):
     print(int_list.pop(idx))
 
 
-josepheus(a,3)
+josephus(a,3)
 
 """
 the reason for hashing is that we have to find the index of the item which needs to be removed.
